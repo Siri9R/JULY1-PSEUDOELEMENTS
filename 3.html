@@ -5,72 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hovering effect</title>
 <style>
-    p{
-        background-color: pink;
-        font-size: 40px;
-        display:none;
-        height: 100px;
-        width:100px;
-    }
-    div:hover>p{
-        display: block;
-    }
-    h3{
-        background-color: rgb(205, 234, 15);
-        font-size: 40px;
-        display:none;
-        height: 100px;
-        width:100px;
-    }
-    div:hover>h3{
-        display: block;
-    }
-    h2{
-        background-color: rgb(137, 18, 206);
-        font-size: 40px;
-        display:none;
-        height: 100px;
-        width:200px;
-    }
-    div:hover>h2{
-        display: block;
-    }
-    h4{
-        background-color: rgb(6, 244, 70);
-        font-size: 40px;
-        display:none;
-        height: 100px;
-        width:100px;
-    }
-    div:hover>h4{
-        display: block;
-    }
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.text-with-image {
+    position: relative;
+    display: inline-block;
+}
+
+.text-with-image img {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-with-image:hover img {
+    display: block;
+}
+
+
 </style></head>
 <body>
-   <div>
-   <button> Hover on CAT</button>
-    <p> CAT</p>
-    
-   </div>
-   <br> 
-   <div>
-    <button> Hover on CAT</button>
-    <h3> DOG</h3>
-    
-   </div> 
-   <br> 
-   <div>
-    <button> Hover on CAT</button>
-    <h2> DONKEY</h2>
-    
-   </div> 
-   <br> 
-   <div>
-    <button> Hover on CAT</button>
-    <h4> RAT</h4>
-    
-   </div> 
-   
-   
+    <div class="container">
+        <div class="text-with-image">
+            <button>CAT</button>
+            <img src="./images/1.jpeg" alt="Image Description">
+        </div>
+        <div class="text-with-image">
+            <button>CAT</button>
+            <img src="./images/1.jpeg" alt="Image Description">
+        </div>
+        <div class="text-with-image">
+            <button>CAT</button>
+            <img src="./images/1.jpeg" alt="Image Description">
+        </div>
+        <div class="text-with-image">
+            <button>CAT</button>
+            <img src="./images/1.jpeg" alt="Image Description">
+        </div>
+    </div>
+  
 </body>
 </html>
